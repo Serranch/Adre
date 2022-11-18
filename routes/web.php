@@ -20,9 +20,9 @@ Route::get('/', function () {
 Route::get('login', function () {
     return view('login');
 });
-Route::get('home', function () {
-    return view('home');
-});
+Route::get('Home', function () {
+    return view('Home');
+})->name('Home');
 
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
 

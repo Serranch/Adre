@@ -12,6 +12,6 @@ class ControladorLogin extends Controller
     }
     function loginUser(ValidadorLogin $req){
         $data = $req->input('txtusuario');
-        return redirect()->route('home')->with('usuario', compact('data'));
+        return redirect()->route('Home')->with('usuario', compact('data'));
     }
 }
