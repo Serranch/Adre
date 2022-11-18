@@ -21,25 +21,27 @@
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header text-center">
-                    <h3>Iniciar Sesion</h3>
+                    <h3>INICIAR SESION</h3>
                     <div class="d-flex justify-content-end social_icon">
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="loginUser" method="post">
+                        @csrf
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" name="txtusuario" class="form-control" placeholder="Usuario">
-
                         </div>
+                        <p class="text-danger fst-italic">{{ $errors->first('txtusuario') }}</p>
                         <div class="input-group form-group mt-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
                             <input type="password" name="txtpassword" class="form-control" placeholder="Password">
                         </div>
+                        <p class="text-danger fst-italic">{{ $errors->first('txtpassword') }}</p>
 
                         <div class="form-group text-center mt-5">
                             <input type="submit" value="Login" class="btn float-right login_btn">
