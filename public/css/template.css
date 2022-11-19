@@ -2,11 +2,13 @@ html,body{
     background-image: url("/img/fondoLogo.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     overflow: hidden;
-    height: 100%;
+    height: auto;
     font-family: 'Numans', sans-serif;
     }
-h1{
+h1,h2,h3{
     text-align: center;
     color: rgb(255, 255, 255);
 }

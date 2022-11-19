@@ -23,6 +23,8 @@ Route::get('login', function () {
 Route::get('Home', function () {
     return view('Home');
 })->name('Home');
-
+Route::get('Almacen', function () {
+    return view('Almacen');
+});
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
 
