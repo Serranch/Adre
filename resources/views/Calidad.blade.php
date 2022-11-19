@@ -3,7 +3,9 @@
 @section('contenido')
 <h3 class="m-4">Reporte de Calidad</h3>
 <div style="text-align: center" class="m-4">
-        <button type="button" class="btn btn-success">Generar Reporte</button>
+    <a class="nav-link" href="AltaCalidad">
+        <button type="button" class="btn btn-success">Agregar Reporte</button>
+    </a>
 </div>
 <div style="text-align: center" class="m-4">
     <div class="btn-group text-center"  role="group" aria-label="Basic mixed styles example">

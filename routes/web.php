@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ControladorAltaProducto;
 use App\Http\Controllers\ControladorLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -39,5 +40,10 @@ Route::get('AltaProducto', function () {
     return view('AltaProducto');
 })->name('AltaProducto');
 
+Route::get('AltaCalidad', function () {
+    return view('AltaCalidad');
+})->name('AltaCalidad');
+
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
+Route::post('AltaProducto', [ControladorAltaProducto::class, 'AltaProducto']);
 
