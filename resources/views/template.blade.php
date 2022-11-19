@@ -28,7 +28,7 @@
               <a class="nav-link {{ request()->routeIs('Almacen')?'active':'' }}" aria-current="page" href="Almacen">Almacen</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link " href="#">Reportes De Calidad</a>
+              <a class="nav-link {{ request()->routeIs('Calidad')?'active':'' }}" href="Calidad">Reportes De Calidad</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link {{ request()->routeIs('Recursos')?'active':'' }}" href="Recursos">Reportes De Recursos</a>
@@ -43,7 +43,7 @@
             </li>
 
             <li class="nav-item mx-auto  px-3 me-lg-0">
-              <a class="nav-link" href="#!">
+              <a class="nav-link" href="login">
                 <button type="button" class="btn btn-secondary">Cerrar Sesion</button>
               </a>
             </li>
@@ -53,58 +53,6 @@
     </nav>
 
   </header>
-  <!-- <header>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
-    <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
-    </a>
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Almacen</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Reportes De Calidad</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#!">Reportes de Recursos</a>
-          </li>
-         
-        </ul>
-        <ul class="navbar-nav d-flex flex-row">
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="nav-item me-3 me-lg-0">
-            <a class="nav-link" href="#!">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <section>
-    <div id="intro" class="bg-image vh-100" style="
-          background-image: url('img/fondoLogo.png');
-        ">
-      <div class="mask" style="background-color: rgba(250, 182, 162, 0.15);"></div>
-    </div>
-  </section>
-</header>  -->
 
   @yield('contenido')
 

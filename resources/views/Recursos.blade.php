@@ -3,10 +3,13 @@
 @section('contenido')
 <h3 class="m-4">Reporte de Recursos</h3>
 <div style="text-align: center" class="m-4">
+        <button type="button" class="btn btn-success">Generar Reporte</button>
+</div>
+<div style="text-align: center" class="m-4">
     <div class="btn-group text-center"  role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-light">Semanal</button>
+        <button type="button" class="btn btn-light mx-2">Semanal</button>
         <button type="button" class="btn btn-light">Mensual</button>
-        <button type="button" class="btn btn-light">Anual</button>
+        <button type="button" class="btn btn-light mx-2">Anual</button>
     </div>
 </div>
 <div class="table-responsive px-5">
@@ -34,8 +37,8 @@
                 <td>---</td>
                 <td>
                     <div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <button type="button" class="btn btn-warning">Generar PDF</button>
+                        
                     </div>
                 </td>
             </tr>
@@ -49,8 +52,7 @@
                 <td>---</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="button" class="btn btn-warning">Generar PDF</button>
                     </div>
                 </td>
             </tr>
@@ -64,8 +66,7 @@
                 <td>---</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="button" class="btn btn-warning">Generar PDF</button>
                     </div>
                 </td>
             </tr>

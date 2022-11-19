@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 Route::get('login', function () {
     return view('login');
-});
+})->name('login');
 Route::get('Home', function () {
     return view('Home');
 })->name('Home');
@@ -30,6 +30,14 @@ Route::get('Almacen', function () {
 Route::get('Recursos', function () {
     return view('Recursos');
 })->name('Recursos');
+
+Route::get('Calidad', function () {
+    return view('Calidad');
+})->name('Calidad');
+
+Route::get('AltaProducto', function () {
+    return view('AltaProducto');
+})->name('AltaProducto');
 
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
 
