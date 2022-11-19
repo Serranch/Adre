@@ -25,6 +25,11 @@ Route::get('Home', function () {
 })->name('Home');
 Route::get('Almacen', function () {
     return view('Almacen');
-});
+})->name('Almacen');
+
+Route::get('Recursos', function () {
+    return view('Recursos');
+})->name('Recursos');
+
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
 

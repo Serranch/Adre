@@ -25,13 +25,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item px-3">
-              <a class="nav-link active" aria-current="page" href="Almacen">Almacen</a>
+              <a class="nav-link {{ request()->routeIs('Almacen')?'active':'' }}" aria-current="page" href="Almacen">Almacen</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="#">Reportes De Calidad</a>
+              <a class="nav-link " href="#">Reportes De Calidad</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="#">Reportes De Recursos</a>
+              <a class="nav-link {{ request()->routeIs('Recursos')?'active':'' }}" href="Recursos">Reportes De Recursos</a>
             </li>
 
           </ul>
