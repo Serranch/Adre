@@ -31,7 +31,9 @@ Route::get('Almacen', function () {
 Route::get('Recursos', function () {
     return view('Recursos');
 })->name('Recursos');
-
+Route::get('AltaRecurso', function () {
+    return view('AltaRecurso');
+})->name('AltaRecurso');
 Route::get('Calidad', function () {
     return view('Calidad');
 })->name('Calidad');

@@ -1,9 +1,15 @@
 @extends('template')
 
 @section('contenido')
-<h3 class="m-4">Reporte de Recursos</h3>
+<div style="background-color: black">
+
+    <h3 class="m-4">Reporte de Recursos</h3>
+  
+  </div>
+
 <div style="text-align: center" class="m-4">
-        <button type="button" class="btn btn-success">Generar Reporte</button>
+    <a href="AltaRecurso"><button type="button" class="btn btn-success">crear Reporte</button></a>
+        
 </div>
 <div style="text-align: center" class="m-4">
     <div class="btn-group text-center"  role="group" aria-label="Basic mixed styles example">

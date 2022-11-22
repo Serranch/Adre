@@ -1,7 +1,13 @@
 @extends('template')
 
 @section('contenido')
-<h3 class="m-4">Reporte de Calidad</h3>
+
+<div style="background-color: black">
+
+    <h3 class="m-4">Reporte de Calidad</h3>
+  
+  </div>
+
 <div style="text-align: center" class="m-4">
     <a class="nav-link" href="AltaCalidad">
         <button type="button" class="btn btn-success">Agregar Reporte</button>

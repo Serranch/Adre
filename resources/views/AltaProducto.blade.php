@@ -8,8 +8,12 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
+<div style="background-color: black">
 
-<h3 class="m-4">Alta Productos</h3>
+  <h3 class="m-4">Alta Productos</h3>
+
+</div>
+
 <div class="mx-5">
   <form action="AltaProducto" method="post">
     @csrf
