@@ -18,7 +18,6 @@
                             <div class="text-center">
                             <label >Nombre</label>
                                 <div class="form-floating mb-3">
-                                    
                                     <input type="text" name="txtNombre" class="form-control" placeholder="nombre" id="floatingInput">
                                     <label for="floatingInput">{{$consulta->nombre}}</label>
                                     <p class="text-warning fst-italic">{{ $errors->first('txtNombre') }}</p>
@@ -42,7 +41,6 @@
                                     <p class="text-warning fst-italic">{{ $errors->first('txtPrecio') }}</p>
                                 </div>
                             </div>
-
                         </div>
                 </div>
 

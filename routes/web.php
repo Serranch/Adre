@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ControladorProducto;
+use App\Http\Controllers\ControladorReporteC;
 use App\Http\Controllers\ControladorLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -21,11 +22,12 @@ Route::get('/', function () {
 Route::get('login', function () {
     return view('login');
 })->name('login');
+
 Route::get('Home', function () {
     return view('Home');
 })->name('Home');
 
-Route::get('Almacen',[ControladorProducto::class, 'consulta'])->name('Almacen');
+
 
 // Route::get('Almacen', function () {
 //     return view('Almacen');
@@ -43,21 +45,30 @@ Route::get('Calidad', function () {
     return view('Calidad');
 })->name('Calidad');
 
-Route::get('AltaProducto', function () {
-    return view('AltaProducto');
-})->name('AltaProducto');
+
 
 Route::get('AltaCalidad', function () {
     return view('AltaCalidad');
 })->name('AltaCalidad');
 
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
-//productos
 
+
+//productos
+Route::get('Almacen',[ControladorProducto::class, 'consulta'])->name('Almacen');
 //alta
+Route::get('AltaProducto', function () {
+    return view('AltaProducto');
+})->name('AltaProducto');
 Route::post('AltaProducto', [ControladorProducto::class, 'Alta']);
 //edicion
 Route::put('EdicionProducto/{id}',[ControladorProducto::class, 'editar'])->name('producto.update');
 //eliminacion
 Route::delete('EliminarProducto/{id}',[ControladorProducto::class, 'eliminar'])->name('producto.destroy');
+
+
+//Calidad
+Route::get('Calidad', [ControladorReporteC::class, 'consulta'])->name('Calidad');
+//generar PDF
+Route::get('Calidad/pdf/', [ControladorReporteC::class, 'createPDF'])->name('Calidad.pdf');
 

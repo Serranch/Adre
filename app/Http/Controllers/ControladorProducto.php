@@ -39,13 +39,13 @@ class ControladorProducto extends Controller
     public function editar(Request $request, $producto)
     {
         DB::table('recursos')->where('id_recursos',$producto)->update([
-            "nombre"=> $producto->input('txtNombre'),
-            "id_almacen"=> $producto->input('txtAlmacen'),
-            "cantidad"=> $producto->input('txtCantidad'),
-            "precio"=> $producto->input('txtPrecio'),
+            "nombre"=> $request->input('txtNombre'),
+            "id_almacen"=> $request->input('txtAlmacen'),
+            "cantidad"=> $request->input('txtCantidad'),
+            "precio"=> $request->input('txtPrecio'),
             "fecha_ingreso"=> Carbon::now(),
         ]);
-        $data = $request->input('nombre');
+        $data = $request->input('txtNombre');
         return redirect('Almacen')->with('edicion',compact('data'));
     }
     

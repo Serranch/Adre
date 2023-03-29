@@ -17,9 +17,7 @@
     Swal.fire({
         position: 'top',
         icon: 'success',
-        text: 'EL Producto {{session('
-        edicion ')['
-        data ']}} ha sido Actualizado',
+        text: 'EL producto {{session('edicion')['data']}} ha sido Actualizado',
         showConfirmButton: false,
         timer: 1500
     })
@@ -33,8 +31,8 @@
 
 </div>
 <div style="text-align: center" class="m-4">
-    <a class="nav-link" href="AltaProducto">
-        <button type="button" class="btn btn-success">Agregar Producto</button>
+    <a type="button" class="btn btn-success" href="AltaProducto">
+        Agregar Producto
     </a>
 </div>
 <div class="table-responsive px-5">
