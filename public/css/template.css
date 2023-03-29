@@ -4,8 +4,6 @@ html,body{
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    overflow: hidden;
-    height: auto;
     font-family: 'Numans', sans-serif;
     }
 h1,h2,h3{

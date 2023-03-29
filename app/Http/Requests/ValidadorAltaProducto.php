@@ -25,10 +25,9 @@ class ValidadorAltaProducto extends FormRequest
     {
         return [
             'txtNombre' => 'required' ,
+            'txtAlmacen' => 'required' ,
             'txtCantidad' => 'required',
             'txtPrecio' => 'required' ,
-            'txtFecha' => 'required',
-            'txtDescripcion' => 'required',
         ];
     }
 }

@@ -21,20 +21,20 @@
                 <th scope="col">Cantidad</th>
                 <th scope="col">Precio de compra</th>
                 <th scope="col">Fecha de ingreso</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Tipo de producto</th>
+                <th scope="col">Almacen</th>
                 <th scope="col">Funciones</th>
             </tr>
         </thead>
         <tbody>
+        @foreach($resultproductos as $consulta)
+
             <tr>
-                <th scope="row">1</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
+                <th scope="row">{{$consulta->id_recursos}}</th>
+                <td>{{$consulta->nombre}}</td>
+                <td>{{$consulta->cantidad}}</td>
+                <td>${{$consulta->precio}}</td>
+                <td>{{$consulta->fecha_ingreso}}</td>
+                <td>{{$consulta->id_almacen}}</td>
                 <td>
                     <div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
                         <button type="button" class="btn btn-warning">Editar</button>
@@ -42,36 +42,8 @@
                     </div>
                 </td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
-                    </div>
-                </td>
-            </tr>
+            @endforeach
+            
         </tbody>
     </table>
 </div>
