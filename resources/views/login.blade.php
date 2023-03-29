@@ -30,21 +30,21 @@
                         @csrf
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                <span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-user"></i></span>
                             </div>
                             <input type="text" name="txtusuario" class="form-control" placeholder="Usuario">
                         </div>
                         <p class="text-danger fst-italic">{{ $errors->first('txtusuario') }}</p>
                         <div class="input-group form-group mt-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                <span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-key"></i></span>
                             </div>
                             <input type="password" name="txtpassword" class="form-control" placeholder="Password">
                         </div>
                         <p class="text-danger fst-italic">{{ $errors->first('txtpassword') }}</p>
 
                         <div class="form-group text-center mt-5">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <input type="submit" value="Login" class="btn float-right login_btn" style="background-color: #9557AC;">
                         </div>
                     </form>
                 </div>

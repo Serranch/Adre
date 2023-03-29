@@ -2,6 +2,31 @@
 
 @section('contenido')
 
+@if (session()->has('Eliminado'))
+{!! "<script>
+    Swal.fire(
+        'Correcto!',
+        'Producto Eliminado!',
+        'success'
+    )
+</script>" !!}
+@endif
+
+@if (session('edicion'))
+<script>
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        text: 'EL Producto {{session('
+        edicion ')['
+        data ']}} ha sido Actualizado',
+        showConfirmButton: false,
+        timer: 1500
+    })
+</script>
+
+@endif
+
 <div style="background-color: black">
 
     <h3 class="m-4">Productos</h3>
@@ -26,8 +51,9 @@
             </tr>
         </thead>
         <tbody>
-        @foreach($resultproductos as $consulta)
-
+            @foreach($resultproductos as $consulta)
+            @include('ModalEliminarProducto')
+            @include('ModalEditarProducto')
             <tr>
                 <th scope="row">{{$consulta->id_recursos}}</th>
                 <td>{{$consulta->nombre}}</td>
@@ -37,13 +63,17 @@
                 <td>{{$consulta->id_almacen}}</td>
                 <td>
                     <div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Editar</button>
-                        <button type="button" class="btn btn-danger">Borrar</button>
+                        <a type="button" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#ModalActualizar{{$consulta->id_recursos}}">
+                            <i class="bi bi-pencil"></i>Editar
+                        </a>
+                        <a type="button" class="btn btn-danger mx-2" data-bs-toggle="modal" data-bs-target="#ModalEliminar{{$consulta->id_recursos}}">
+                            <i class="bi bi-trash3"></i>eliminar
+                        </a>
                     </div>
                 </td>
             </tr>
             @endforeach
-            
+
         </tbody>
     </table>
 </div>

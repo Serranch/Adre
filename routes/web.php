@@ -52,5 +52,12 @@ Route::get('AltaCalidad', function () {
 })->name('AltaCalidad');
 
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
+//productos
+
+//alta
 Route::post('AltaProducto', [ControladorProducto::class, 'Alta']);
+//edicion
+Route::put('EdicionProducto/{id}',[ControladorProducto::class, 'editar'])->name('producto.update');
+//eliminacion
+Route::delete('EliminarProducto/{id}',[ControladorProducto::class, 'eliminar'])->name('producto.destroy');
 
