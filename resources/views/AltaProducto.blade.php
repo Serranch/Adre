@@ -8,9 +8,9 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
-<div style="background-color: black">
+<div class="text-center">
 
-  <h3 class="m-4">Alta Productos</h3>
+  <h3 class="titulo">Alta Productos</h3>
 
 </div>
 

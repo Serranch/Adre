@@ -18,26 +18,26 @@
                             <div class="text-center">
                             <label >Nombre</label>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="txtNombre" class="form-control" placeholder="nombre" id="floatingInput">
-                                    <label for="floatingInput">{{$consulta->nombre}}</label>
+                                    <input type="text" name="txtNombre" class="form-control" placeholder="nombre" id="floatingInput" value="{{$consulta->nombre}}">
+                                    
                                     <p class="text-warning fst-italic">{{ $errors->first('txtNombre') }}</p>
                                 </div>
                                 <label >Almacen</label>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="txtAlmacen" class="form-control" placeholder="almacen" id="floatingInput">
-                                    <label for="floatingInput">{{$consulta->id_almacen}}</label>
+                                    <input type="text" name="txtAlmacen" class="form-control" placeholder="almacen" id="floatingInput" value="{{$consulta->id_almacen}}">
+                                    
                                     <p class="text-warning fst-italic">{{ $errors->first('txtAlmacen') }}</p>
                                 </div>
                                 <label >Cantidad</label>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="txtCantidad" class="form-control" placeholder="Cantidad" id="floatingInput">
-                                    <label for="floatingInput">{{$consulta->cantidad}}</label>
+                                    <input type="text" name="txtCantidad" class="form-control" placeholder="Cantidad" id="floatingInput" value="{{$consulta->cantidad}}">
+                                    
                                     <p class="text-warning fst-italic">{{ $errors->first('txtCantidad') }}</p>
                                 </div>
                                 <label >Precio</label>
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="txtPrecio" class="form-control" placeholder="Precio" id="floatingInput">
-                                    <label for="floatingInput">{{$consulta->precio}}</label>
+                                    <input type="text" name="txtPrecio" class="form-control" placeholder="Precio" id="floatingInput" value="{{$consulta->precio}}">
+                                    
                                     <p class="text-warning fst-italic">{{ $errors->first('txtPrecio') }}</p>
                                 </div>
                             </div>

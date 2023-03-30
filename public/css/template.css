@@ -1,6 +1,7 @@
 html,body{
-    background-image: url("/img/fondoLogo.png");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.226), rgba(255, 255, 255, 0.226)), url("/img/fondoLogo.png");
     background-size: cover;
+    
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -17,4 +18,12 @@ h1,h2,h3{
 .navbar-brand {
   font-size: 1.75rem;
   letter-spacing: 3px;
+}
+.titulo{
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  
+  text-align: center;
+  background-color: rgba(25, 3, 29, 0.904) !important;
 }

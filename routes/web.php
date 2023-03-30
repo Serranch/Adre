@@ -28,28 +28,10 @@ Route::get('Home', function () {
 })->name('Home');
 
 
-
-// Route::get('Almacen', function () {
-//     return view('Almacen');
-// })->name('Almacen');
-
-Route::get('Recursos', function () {
-    return view('Recursos');
-})->name('Recursos');
-
 Route::get('AltaRecurso', function () {
     return view('AltaRecurso');
 })->name('AltaRecurso');
 
-Route::get('Calidad', function () {
-    return view('Calidad');
-})->name('Calidad');
-
-
-
-Route::get('AltaCalidad', function () {
-    return view('AltaCalidad');
-})->name('AltaCalidad');
 
 Route::post('loginUser', [ControladorLogin::class, 'loginUser']);
 
@@ -69,6 +51,14 @@ Route::delete('EliminarProducto/{id}',[ControladorProducto::class, 'eliminar'])-
 
 //Calidad
 Route::get('Calidad', [ControladorReporteC::class, 'consulta'])->name('Calidad');
+//filtrar por semana
+Route::get('Calidad/semana', [ControladorReporteC::class, 'consultaSemana'])->name('Calidad.semana');
+//filtrar por mes
+Route::get('Calidad/mes', [ControladorReporteC::class, 'consultaMes'])->name('Calidad.mes');
+
 //generar PDF
 Route::get('Calidad/pdf/', [ControladorReporteC::class, 'createPDF'])->name('Calidad.pdf');
 
+
+//Recursos
+Route::get('Recursos', [ControladorReporteR::class, 'consulta'])->name('Recursos');

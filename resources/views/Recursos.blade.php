@@ -18,64 +18,36 @@
         <button type="button" class="btn btn-light mx-2">Anual</button>
     </div>
 </div>
+<div class="text-center" >
+    <a type="button" class="btn btn-warning mb-1" href="{{route('Calidad.pdf')}}">Export to PDF</a>
+</div>
 <div class="table-responsive px-5">
     <table class="table table-dark table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Reporte</th>
-                <th scope="col">Material</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Fecha de reporte</th>
+                <th scope="col">nombre responsable</th>
+                <th scope="col">cargo</th>
+                <th scope="col">fecha de reporte</th>
+                <th scope="col">nombre</th>
                 <th scope="col">Descripcion</th>
-                <th scope="col">Tipo de producto</th>
-                <th scope="col">Funciones</th>
+                <th scope="col">Cantidad</th>
             </tr>
         </thead>
         <tbody>
+            @foreach($resultReportesR as $consulta)
             <tr>
-                <th scope="row">1</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>
-                    <div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
-                        <button type="button" class="btn btn-warning">Generar PDF</button>
-                        
-                    </div>
-                </td>
+                <th scope="row">{{$consulta->id_reporteR}}</th>
+                <td>{{$consulta->nombre_responsable}}</td>
+                <td>{{$consulta->cargo}}</td>
+                <td>{{$consulta->fecha_reporte}}</td>
+                <td>{{$consulta->nombre}}</td>
+                <td>{{$consulta->descripcion}}</td>
+                <td>{{$consulta->cantidad}}</td>
+                
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-warning">Generar PDF</button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>---</td>
-                <td>
-                    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-warning">Generar PDF</button>
-                    </div>
-                </td>
-            </tr>
+            @endforeach
+
         </tbody>
     </table>
 </div>

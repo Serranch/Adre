@@ -25,9 +25,9 @@
 
 @endif
 
-<div style="background-color: black">
+<div class="text-center">
 
-    <h3 class="m-4">Productos</h3>
+    <h3 class="titulo">Productos</h3>
 
 </div>
 <div style="text-align: center" class="m-4">

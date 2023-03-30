@@ -7,8 +7,12 @@
     <title>Reporte Calidad</title>
 </head>
 <body>
-<div class="table-responsive px-5">
-    <table class="table table-dark table-hover">
+    <div class="text-center">
+        <h1 class="text-center"> Lista de reportes de calidad</h1>
+    </div>
+    
+<div >
+    <table class="table ">
         <thead>
             <tr>
                 <th scope="col">#</th>

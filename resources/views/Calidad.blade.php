@@ -2,9 +2,9 @@
 
 @section('contenido')
 
-<div style="background-color: black">
+<div class="text-center">
 
-    <h3 class="m-4">Reporte de Calidad</h3>
+    <h3 class="titulo">Reporte de Calidad</h3>
 
 </div>
 
@@ -15,13 +15,13 @@
 </div>
 <div style="text-align: center" class="m-4">
     <div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-light mx-2">Semanal</button>
-        <button type="button" class="btn btn-light">Mensual</button>
+        <a type="button" class="btn btn-light mx-2" href="{{route('Calidad.semana')}}">Semanal</a>
+        <a type="button" class="btn btn-light mx-2" href="{{route('Calidad.mes')}}">Mensual</a>
         <button type="button" class="btn btn-light mx-2">Anual</button>
     </div>
 </div>
-<div class="btn-group text-center" role="group" aria-label="Basic mixed styles example">
-    <a type="button" class="btn btn-warning" href="{{route('Calidad.pdf')}}">Export to PDF</a>
+<div class="text-center" >
+    <a type="button" class="btn btn-warning mb-1" href="{{route('Calidad.pdf')}}">Export to PDF</a>
 </div>
 <div class="table-responsive px-5">
     <table class="table table-dark table-hover">
