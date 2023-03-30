@@ -1,9 +1,9 @@
 @extends('template')
 
 @section('contenido')
-<div style="background-color: black">
+<div class="text-center">
 
-    <h3 class="m-4">Reporte de Recursos</h3>
+    <h3 class="titulo">Reporte de Recursos</h3>
   
   </div>
 
