@@ -14,6 +14,25 @@ class ControladorReporteC extends Controller
         $resultReportesC = DB::table('reporte_calidad')->get();
         return view('Calidad', compact('resultReportesC'));
     }
+
+    public function Alta(Request $reporte)
+    {
+        DB::table('reporte_calidad')->insert([
+            "nombre"=> $reporte->input('txtNombre'),
+            "cargo"=> $reporte->input('txtDatos'),
+            "correo"=> $reporte->input('txtcorreo'),
+            "cantidad"=> $reporte->input('txtCantidad'),
+            "precio_compra"=> $reporte->input('txtPrecio'),
+            "fecha_reporte"=> Carbon::now(),
+            "maquina"=> $reporte->input('txtMaquina'),
+            "descripcion"=> $reporte->input('txtDescripcion'),
+            
+        ]);
+        $data = $reporte->input('nombre');
+        return redirect()->route('AltaCalidad')->with('exito', compact('data'));
+    }
+
+
     public function consultaSemana()
     {
         $semana_actual = date_format(date_create(), 'W');
@@ -30,6 +49,15 @@ class ControladorReporteC extends Controller
 
         $resultReportesC = DB::table('reporte_calidad')
             ->whereMonth('fecha_reporte', $mes_actual)
+            ->whereYear('fecha_reporte', date('Y'))
+            ->get();
+        return view('Calidad', compact('resultReportesC'));
+    }
+    public function consultaAño()
+    {
+        $año_actual = date_format(date_create(), 'Y');
+
+        $resultReportesC = DB::table('reporte_calidad')
             ->whereYear('fecha_reporte', date('Y'))
             ->get();
         return view('Calidad', compact('resultReportesC'));

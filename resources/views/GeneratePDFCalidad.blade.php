@@ -16,24 +16,28 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">nombre responsable</th>
+                <th scope="col">nombre</th>
+                <th scope="col">correo</th>
                 <th scope="col">cargo</th>
                 <th scope="col">fecha de reporte</th>
-                <th scope="col">nombre</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">precio de compra</th>
                 <th scope="col">Descripcion</th>
-                <th scope="col">defectos</th>
+                <th scope="col">maquina</th>
             </tr>
         </thead>
         <tbody>
         @foreach($resultReportesC as $consulta)
             <tr>
                 <th>{{$consulta->id_reporteC}}</th>
-                <td>{{$consulta->nombre_responsable}}</td>
+                <td>{{$consulta->nombre}}</td>
+                <td>{{$consulta->correo}}</td>
                 <td>{{$consulta->cargo}}</td>
                 <td>{{$consulta->fecha_reporte}}</td>
-                <td>{{$consulta->nombre}}</td>
+                <td>{{$consulta->cantidad}}</td>
+                <td>{{$consulta->precio_compra}}</td>
                 <td>{{$consulta->descripcion}}</td>
-                <td>{{$consulta->defectos}}</td>
+                <td>{{$consulta->maquina}}</td>
                 
             </tr>
         @endforeach

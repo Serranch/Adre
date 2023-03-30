@@ -13,9 +13,9 @@
 </div>
 <div style="text-align: center" class="m-4">
     <div class="btn-group text-center"  role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-light mx-2">Semanal</button>
-        <button type="button" class="btn btn-light">Mensual</button>
-        <button type="button" class="btn btn-light mx-2">Anual</button>
+    <a type="button" class="btn btn-light mx-2" href="{{route('Recursos.semana')}}">Semanal</a>
+        <a type="button" class="btn btn-light mx-2" href="{{route('Recursos.mes')}}">Mensual</a>
+        <a type="button" class="btn btn-light mx-2" href="{{route('Recursos.año')}}">Anual</a>
     </div>
 </div>
 <div class="text-center" >
