@@ -43,7 +43,7 @@
             </li>
 
             <li class="nav-item mx-auto  px-3 me-lg-0">
-              <a class="nav-link" href="login">
+              <a class="nav-link" href="logout">
                 <button type="button" class="btn btn-secondary">Cerrar Sesion</button>
               </a>
             </li>

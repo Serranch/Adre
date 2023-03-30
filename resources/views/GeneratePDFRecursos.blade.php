@@ -1,28 +1,18 @@
-@extends('template')
-
-@section('contenido')
-<div style="background-color: black">
-
-    <h3 class="m-4">Reporte de Recursos</h3>
-  
-  </div>
-
-<div style="text-align: center" class="m-4">
-    <a href="AltaRecurso"><button type="button" class="btn btn-success">crear Reporte</button></a>
-        
-</div>
-<div style="text-align: center" class="m-4">
-    <div class="btn-group text-center"  role="group" aria-label="Basic mixed styles example">
-        <button type="button" class="btn btn-light mx-2">Semanal</button>
-        <button type="button" class="btn btn-light">Mensual</button>
-        <button type="button" class="btn btn-light mx-2">Anual</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Recursos</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="text-center"> Lista de reportes de recursos</h1>
     </div>
-</div>
-<div class="text-center" >
-    <a type="button" class="btn btn-warning mb-1" href="{{route('Recursos.pdf')}}">Export to PDF</a>
-</div>
-<div class="table-responsive px-5">
-    <table class="table table-dark table-hover">
+    
+    <div >
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -51,5 +41,5 @@
         </tbody>
     </table>
 </div>
-
-@stop
+</body>
+</html>

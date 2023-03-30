@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ControladorProducto;
 use App\Http\Controllers\ControladorReporteC;
+use App\Http\Controllers\ControladorReporteR;
 use App\Http\Controllers\ControladorLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -16,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-Route::get('login', function () {
-    return view('login');
-})->name('login');
+// Route::get('/', function () {
+//     return view('login');
+// });
+//login
+Route::get('/', [ControladorLogin::class, 'showLoginForm'])->name('login');
+Route::post('/login', [ControladorLogin::class, 'login'])->name('login.post');
+Route::get('/logout', [ControladorLogin::class, 'logout'])->name('logout');
 
 Route::get('Home', function () {
     return view('Home');
@@ -62,3 +64,5 @@ Route::get('Calidad/pdf/', [ControladorReporteC::class, 'createPDF'])->name('Cal
 
 //Recursos
 Route::get('Recursos', [ControladorReporteR::class, 'consulta'])->name('Recursos');
+//generar PDF
+Route::get('Recursos/pdf/', [ControladorReporteR::class, 'createPDF'])->name('Recursos.pdf');

@@ -40,7 +40,7 @@ class ControladorReporteR extends Controller
         // retreive all records from db
         $resultReportesR = DB::table('reporte_recursos')->get();
         // share data to view
-        $pdf = PDF::loadView('GeneratePDFCalidad', compact('resultReportesR'))->setOptions(['defaultFont' => 'sans-serif']);
+        $pdf = PDF::loadView('GeneratePDFRecursos', compact('resultReportesR'))->setOptions(['defaultFont' => 'sans-serif']);
         return $pdf->stream('prueba.pdf');
         // download PDF file with download method
         return $pdf->download('prueba.pdf');

@@ -26,23 +26,38 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form action="loginUser" method="post">
+                    <form action="{{ route('login.post') }}" method="post">
                         @csrf
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-user"></i></span>
-                            </div>
-                            <input type="text" name="txtusuario" class="form-control" placeholder="Usuario">
-                        </div>
-                        <p class="text-danger fst-italic">{{ $errors->first('txtusuario') }}</p>
-                        <div class="input-group form-group mt-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-key"></i></span>
-                            </div>
-                            <input type="password" name="txtpassword" class="form-control" placeholder="Password">
-                        </div>
-                        <p class="text-danger fst-italic">{{ $errors->first('txtpassword') }}</p>
+                        @if (session('error'))
+                        <h4>{{ session('error') }}</h4>
+                        @endif
 
+                        <div class="form-group row">
+                                <label for="email" class="col-md-3 col-form-label text-md-right"><span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-user"></i></span></label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="password" class="col-md-3 col-form-label text-md-right"> <span class="input-group-text" style="height: 40px; background-color: #9557AC;"><i class="fas fa-key"></i></span></label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
                         <div class="form-group text-center mt-5">
                             <input type="submit" value="Login" class="btn float-right login_btn" style="background-color: #9557AC;">
                         </div>
